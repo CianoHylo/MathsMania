@@ -7,7 +7,48 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/large.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Image x:Name="image" Stretch="Fill" Grid.ColumnSpan="5" HorizontalAlignment="Center" Height="155" Margin="51,10,51,0"  VerticalAlignment="Top" Width="258" Source="Assets/math-mania.jpg" Grid.Row="1" RenderTransformOrigin="0.348,0.397"/>
+        <Button x:Name="playButton" Content="PLAY" Grid.Column="2" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="95" Width="144"  FontSize="40" FontFamily="Showcard Gothic" Click="ClickedPlay">
+
+            <Button.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="OrangeRed" Offset="0" />
+                    <GradientStop Color="#FFAAE01B" Offset="1.0" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#FFD1762B" Offset="0.1" />
+                    <GradientStop Color="White" Offset="0.25" />
+                    <GradientStop Color="Yellow" Offset="0.75" />
+                    <GradientStop Color="#FFD1762B" Offset="1.0" />
+                </LinearGradientBrush>
+            </Button.Background>
+
+            
+
+
+        </Button>
     </Grid>
 </Page>

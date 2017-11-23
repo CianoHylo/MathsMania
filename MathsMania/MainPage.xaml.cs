@@ -22,9 +22,111 @@ namespace MathsMania
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+
+        private void ClickedPlay(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SelectPage), null);
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
         }
+        ///if ((firstsymbol.Text= "+") && (secondSymbol.Text= "+))
+        ///{
+        /// num1 = ran1.Next(48) + 1;
+        ///num2 = ran1.Next(48) + 1;
+        ///num3= ran1.Next(48) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "+") && (secondSymbol.Text= "*"))
+        ///{
+        /// num1 = ran1.Next(48) + 1;
+        ///num2 = ran1.Next(10) + 1;
+        ///num3= ran1.Next(10) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "*") && (secondSymbol.Text= "+"))
+        ///{
+        /// num1 = ran1.Next(10) + 1;
+        ///num2 = ran1.Next(10) + 1;
+        ///num3= ran1.Next(48) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "*") && (secondSymbol.Text= "*"))
+        ///{
+        /// num1 = ran1.Next(10) + 1;
+        ///num2 = ran1.Next(10) + 1;
+        ///num3= ran1.Next(10) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "*") && (secondSymbol.Text= "-"))
+        ///{
+        /// num1 = ran1.Next(10) + 1;
+        ///num2 = ran1.Next(10) + 1;
+        ///num4= num1*num2;
+        ///num3= ran1.Next(0, num4) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "+") && (secondSymbol.Text= "-"))
+        ///{
+        /// num1 = ran1.Next(48) + 1;
+        ///num2 = ran1.Next(48) + 1;
+        ///num4= num1+num2;
+        ///num3= ran1.Next(0, num4) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "-") && (secondSymbol.Text= "*"))
+        ///{
+        /// num1 = ran1.Next(48) + 1;
+        ///num2 = ran1.Next(0, num1) + 1;
+        ///num3= ran1.Next(10) + 1;
+        ///}
+        ///else if ((firstSymbol.Text= "-") && (secondSymbol.Text= "+"))
+        ///{
+        /// num1 = ran1.Next(48) + 1;
+        ///num2 = ran1.Next(0, num1) + 1;
+        ///num3= ran1.Next(48) + 1;
+        ///}
+        ///else 
+        ///{
+        /// num1 = ran1.Next(48) + 1;
+        ///num2 = ran1.Next(0, num1) + 1;
+        ///num4= num1-num2;
+        ///num3= ran1.Next(0, num4) + 1;
+        ///}
+
+        ///if ((firstsymbol.Text= "+") && (secondSymbol.Text= "+))
+        ///{
+        /// answer= num1 + num2 + num3;
+        ///}
+        ///else if ((firstSymbol.Text= "+") && (secondSymbol.Text= "*"))
+        ///{
+        /// answer = num1 + (num2*num3);
+        ///}
+        ///else if ((firstSymbol.Text= "*") && (secondSymbol.Text= "+"))
+        ///{
+        /// answer = (num1 * num2) + num3;
+        ///}
+        ///else if ((firstSymbol.Text= "*") && (secondSymbol.Text= "*"))
+        ///{
+        /// answer = num1 * num2 * num3;
+        ///}
+        ///else if ((firstSymbol.Text= "*") && (secondSymbol.Text= "-"))
+        ///{
+        /// answer = (num1 * num2) - num3;
+        ///}
+        ///else if ((firstSymbol.Text= "+") && (secondSymbol.Text= "-"))
+        ///{
+        ///  answer = num1 + num2 - num3;
+        ///}
+        ///else if ((firstSymbol.Text= "-") && (secondSymbol.Text= "*"))
+        ///{
+        /// answer = num1 - (num2 * num3);
+        ///}
+        ///else if ((firstSymbol.Text= "-") && (secondSymbol.Text= "+"))
+        ///{
+        /// answer = num1 - num2 + num3;
+        ///}
+        ///else 
+        ///{
+        /// answer = num1 - num2 - num3;
+        ///}
+
     }
 }
