@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#2e79b4">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/large.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
@@ -25,6 +28,9 @@
         <Button x:Name="Easy" Background="Green" Content="Easy" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="50" FontFamily="Showcard Gothic" Click="EasyClick" />
         <Button x:Name="Regular" Background="OrangeRed" Content="Regular" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="45" FontFamily="Showcard Gothic" Click="RegularClick"/>
         <Button x:Name="Hard" Background="Red" Content="Hard" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontFamily="Showcard Gothic" FontSize="50" Click="HardClick"/>
-        <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="4" VerticalAlignment="Top" Click="button_Click"/>
+        <Button x:Name="HighScore" Background="Yellow" Content="High Scores" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontFamily="Showcard Gothic" FontSize="32" Click="HighScoreClick"/>
+
+        <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
+        <Image x:Name="calculator" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="4,55,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"  Source="Assets/calculator.png"/>
     </Grid>
 </Page>

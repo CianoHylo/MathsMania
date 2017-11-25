@@ -30,25 +30,25 @@ namespace MathsMania
 
         }
 
-
+        // use radio button to display high score depending on selected level
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             RadioButton current = (RadioButton)sender;
             int tag = Convert.ToInt32(current.Tag);
             if (tag == 6)
             {
-                scoreText.Text = EasyPage.localSettings.Values["highScore"].ToString();
+                scoreText.Text = EasyPage.localSettings.Values["easyHighScore"].ToString();
               
             }
 
             else if (tag == 7)
             {
-                scoreText.Text = 6.ToString();
+                scoreText.Text = RegularPage.localSettings.Values["reghighScore"].ToString();
             }
 
             else
             {
-                scoreText.Text = 7.ToString();
+                scoreText.Text = HardPage.localSettings.Values["hardHighScore"].ToString();
             }
             
         }

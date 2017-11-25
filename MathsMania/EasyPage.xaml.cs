@@ -20,10 +20,6 @@ using Windows.Media.Core;
 using Windows.Storage;
 
 
-
-
-
-
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MathsMania
@@ -51,22 +47,23 @@ namespace MathsMania
         public int correctCounter = 0;
         public int miliseconds = 2000;
 
+        public EasyPage()
+        {
+            this.InitializeComponent();
+        }
+
         //Navigate back to the main page
         private void HomeClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null);
+            timer.Stop();
         }
 
         //navigate back to the select page
         private void BackClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SelectPage), null);
-        }
-
-        public EasyPage()
-        {
-          
-            this.InitializeComponent();
+            timer.Stop();
         }
 
         //fuction for when the go button is clicked.
@@ -204,6 +201,22 @@ namespace MathsMania
                 gameoverMp3.Source = MediaSource.CreateFromStorageFile(file);
                 gameoverMp3.Play();
 
+                //use try catch method to store highscore into local settings
+                try
+                {
+                    int temp = Convert.ToInt32(localSettings.Values["easyHighScore"]);
+                    if (temp < score)
+                    {
+                        localSettings.Values["easyHighScore"] = score.ToString();
+
+                    }
+                }
+                catch
+                {
+                    // doesn't exist, just set the value
+                    localSettings.Values["easyHighScore"] = score.ToString();
+                }
+
             }
         }//timer_tick end
 
@@ -272,19 +285,20 @@ namespace MathsMania
                 finalScore1.Foreground = new SolidColorBrush(Colors.Red);
                 finalScore2.Foreground = new SolidColorBrush(Colors.Red);
                 
+                //use try catch method to store highscore into local settings
                 try
                 {
-                    int temp = Convert.ToInt32(localSettings.Values["highScore"]);
+                    int temp = Convert.ToInt32(localSettings.Values["easyHighScore"]);
                     if (temp < score)
                     {
-                        localSettings.Values["highScore"] = score.ToString();
-                       // Settings.easyHighscore = Convert.ToInt32(localSettings.Values["highScore"]);
+                        localSettings.Values["easyHighScore"] = score.ToString();
+                       
                     }
                 }
                 catch
                 {
                     // doesn't exist, just set the value
-                    localSettings.Values["highScore"] = score.ToString();
+                    localSettings.Values["easyHighScore"] = score.ToString();
                 }
                 answerBox.IsEnabled = false;
                 Go.Content = "Try Again";
@@ -318,6 +332,7 @@ namespace MathsMania
             }
         }//end of key down
 
-        }//end of class
+        
+    }//end of class
 
 }//end of namespace

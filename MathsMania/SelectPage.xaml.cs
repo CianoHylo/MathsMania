@@ -51,7 +51,7 @@ namespace MathsMania
             this.InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void HighScoreClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Settings), null);
         }

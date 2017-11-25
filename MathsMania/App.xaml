@@ -1,8 +1,17 @@
-﻿<Application
+﻿
+ <Application
     x:Class="MathsMania.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MathsMania"
     RequestedTheme="Light">
+    
+    <!-- This changes button background when you hover over it as the grid background is dark we want the 
+         Button background to be white -->
+    <Application.Resources>
+        <SolidColorBrush x:Key="ButtonBackgroundPointerOver">
+            #FFFFFF
+        </SolidColorBrush>
+    </Application.Resources> 
 
 </Application>

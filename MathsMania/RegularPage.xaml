@@ -7,7 +7,58 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <!-- Add background image -->
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/large.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <!-- Add Column and row definitions-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <!-- Add home and back buttons to top left and right corners-->
+        <Button x:Name="Home" Background="Green" Content="Home" Grid.Column="5" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="HomeClick"/>
+        <Button x:Name="Back" Background="Green" Content="Back" Grid.Column="0" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="BackClick"/>
+
+        <!-- And each number and symbol text blocks to appear in a row-->
+        <TextBlock x:Name="firstNum" Foreground="AntiqueWhite" Grid.Column="1"  Grid.Row="1" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontFamily="Bradley Hand ITC" FontSize="30" />
+        <TextBlock x:Name="firstSymbol" Foreground="AntiqueWhite"  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Margin="10,10,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontFamily="Bradley Hand ITC" FontSize="30"/>
+        <TextBlock x:Name="secondNum" Foreground="AntiqueWhite" Grid.Column="3"  Grid.Row="1" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontFamily="Bradley Hand ITC" FontSize="30"/>
+        <TextBlock x:Name="equals" Foreground="AntiqueWhite" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" Margin="10,10,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="30" FontFamily="Bradley Hand ITC"/>
+
+        <!-- Add done and go button and disable go button upon entering page-->
+        <Button x:Name="Done" Background="Red" Foreground="AntiqueWhite" Content="Done" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="108" Width="220" Click="Done_Click" FontFamily="Showcard Gothic" FontSize="30" IsEnabled="False"/>
+        <Button x:Name="Go" Background="Green" Foreground="AntiqueWhite" Content="GO" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="108" Width="220" Click="Go_Click" FontFamily="Showcard Gothic" FontSize="30"/>
+
+        <!-- Add text box so the user can enter their answer-->
+        <TextBox x:Name="answerBox" Grid.ColumnSpan="4" Grid.Column="1" HorizontalAlignment="Center" Margin="10,55,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="17" Width="220" KeyDown="answerBox_KeyDown"/>
+
+        <!-- Add timer text box and gameover/correct text box set both to blank when entering the application-->
+        <TextBlock x:Name="timertext" Foreground="AntiqueWhite"  Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Right" Margin="22,40,0,2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="76" Width="98" FontFamily="Power Red and Blue" FontSize="60" RenderTransformOrigin="0.531,0.491" />
+        <TextBlock x:Name="gameover" Foreground="Black" HorizontalAlignment="Center" Margin="10,93,10,73" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Grid.ColumnSpan="6" Height="90" Grid.RowSpan="2" Width="340" FontSize="60" FontFamily="Showcard Gothic"/>
+
+        <!-- Add two overlaying score boxes in order to print score and final score-->
+        <TextBlock x:Name="score1" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Right" Height="59" Margin="0,96,25,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2"/>
+        <TextBlock x:Name="score2" Grid.Column="3" HorizontalAlignment="Left" Height="59" Margin="35,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="finalScore1" Grid.ColumnSpan="3" Grid.Column="1" Height="59" Margin="0,96,25,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2" HorizontalAlignment="Right" Width="145"/>
+        <TextBlock x:Name="finalScore2" Grid.Column="3" HorizontalAlignment="Left" Height="59" Margin="35,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <!-- Add image of pens for design-->
+        <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
 
     </Grid>
 </Page>

@@ -46,9 +46,6 @@
                 </LinearGradientBrush>
             </Button.Background>
 
-
-
-
         </Button>
         <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
         <Image x:Name="duster" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="67,80,0,0" Grid.Row="4" VerticalAlignment="Top" Width="144" Source="Assets/duster.png" RenderTransformOrigin="0.509,0.547" Grid.ColumnSpan="2"/>
