@@ -46,9 +46,13 @@
                 </LinearGradientBrush>
             </Button.Background>
 
-            
+
 
 
         </Button>
+        <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
+        <Image x:Name="duster" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="67,80,0,0" Grid.Row="4" VerticalAlignment="Top" Width="144" Source="Assets/duster.png" RenderTransformOrigin="0.509,0.547" Grid.ColumnSpan="2"/>
+        <Image x:Name="calculator" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="94,55,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"  Source="Assets/calculator.png"/>
+        <Image x:Name="ruler" Grid.ColumnSpan="2" Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="5,60,0,10" Grid.Row="4" VerticalAlignment="Bottom" Width="100"  Source="Assets/ruler.png" RenderTransformOrigin="0.497,0.493"/>
     </Grid>
 </Page>

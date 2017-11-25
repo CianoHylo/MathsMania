@@ -98,12 +98,21 @@
     <Compile Include="EasyPage.xaml.cs">
       <DependentUpon>EasyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HardPage.xaml.cs">
+      <DependentUpon>HardPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularPage.xaml.cs">
+      <DependentUpon>RegularPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectPage.xaml.cs">
       <DependentUpon>SelectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -113,11 +122,15 @@
     <None Include="MathsMania_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\calculator.png" />
     <Content Include="Assets\Correct-answer.mp3" />
+    <Content Include="Assets\duster.png" />
     <Content Include="Assets\g-gif-update.gif" />
     <Content Include="Assets\game-over.mp3" />
     <Content Include="Assets\large.jpg" />
     <Content Include="Assets\math-mania.jpg" />
+    <Content Include="Assets\pens.png" />
+    <Content Include="Assets\ruler.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -136,11 +149,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="HardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="RegularPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SelectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

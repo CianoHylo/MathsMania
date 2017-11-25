@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Shapes;
 using System.Threading.Tasks;
 using Windows.Media.Playback;
 using Windows.Media.Core;
+using Windows.Storage;
 
 
 
@@ -29,12 +30,13 @@ namespace MathsMania
 {
     /// This is the Easy Page where basic addition and subtraction will be implemented.
     /// 
-    public sealed partial class EasyPage : Page
+    public partial class EasyPage : Page
     {
         //Declare Variables
         DispatcherTimer timer = new DispatcherTimer();
         MediaPlayer correctMp3 = new MediaPlayer();
         MediaPlayer gameoverMp3 = new MediaPlayer();
+        public static ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         public int increment;
         public int num1;
         public int num2;
@@ -269,6 +271,21 @@ namespace MathsMania
                 finalScore2.Text = score.ToString();
                 finalScore1.Foreground = new SolidColorBrush(Colors.Red);
                 finalScore2.Foreground = new SolidColorBrush(Colors.Red);
+                
+                try
+                {
+                    int temp = Convert.ToInt32(localSettings.Values["highScore"]);
+                    if (temp < score)
+                    {
+                        localSettings.Values["highScore"] = score.ToString();
+                       // Settings.easyHighscore = Convert.ToInt32(localSettings.Values["highScore"]);
+                    }
+                }
+                catch
+                {
+                    // doesn't exist, just set the value
+                    localSettings.Values["highScore"] = score.ToString();
+                }
                 answerBox.IsEnabled = false;
                 Go.Content = "Try Again";
                 correctCounter = 0;

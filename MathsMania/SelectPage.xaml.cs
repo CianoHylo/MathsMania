@@ -35,12 +35,25 @@ namespace MathsMania
             this.Frame.Navigate(typeof(EasyPage), null);
         }
 
-      
+        private void RegularClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RegularPage), null);
+        }
+
+        private void HardClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(HardPage), null);
+        }
 
         public SelectPage()
         {
             
             this.InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Settings), null);
         }
     }
 }

@@ -35,12 +35,13 @@
         <TextBlock x:Name="equals" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" Margin="10,10,0,0"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="30" FontFamily="Showcard Gothic"/>
         <Button x:Name="Done" Content="Done" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="108" Width="220" Click="Done_Click" FontFamily="Showcard Gothic" FontSize="30" IsEnabled="False"/>
         <Button x:Name="Go" Content="GO" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="108" Width="220" Click="Go_Click" FontFamily="Showcard Gothic" FontSize="30"/>
-        <TextBox x:Name="answerBox" Grid.ColumnSpan="4" Grid.Column="1" HorizontalAlignment="Center"
-         Margin="10,55,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top"
-         Height="17" Width="220" KeyDown="answerBox_KeyDown"/>
-        <TextBlock x:Name="timertext" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Right" Margin="22,20,0,32" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="76" Width="98" FontFamily="Showcard Gothic" FontSize="60" RenderTransformOrigin="0.531,0.491" />
+        <TextBox x:Name="answerBox" Grid.ColumnSpan="4" Grid.Column="1" HorizontalAlignment="Center" Margin="10,55,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="17" Width="220" KeyDown="answerBox_KeyDown"/>
+        <TextBlock x:Name="timertext" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Right" Margin="22,20,0,32"
+         TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="76" Width="98" FontFamily="Showcard Gothic" FontSize="60"
+         RenderTransformOrigin="0.531,0.491" />
         <TextBlock x:Name="gameover" Foreground="Black" HorizontalAlignment="Center" Margin="10,93,10,73" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Grid.ColumnSpan="6" Height="90" Grid.RowSpan="2" Width="340" FontSize="60" FontFamily="Showcard Gothic"/>
-        <TextBlock x:Name="score1" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Right" Height="59" Margin="0,96,25,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2"/>
+        <TextBlock x:Name="score1" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Right" Height="59" Margin="0,96,25,0"
+         TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2"/>
         <TextBlock x:Name="score2" Grid.Column="3" HorizontalAlignment="Left" Height="59" Margin="35,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="finalScore1" Grid.ColumnSpan="3" Grid.Column="1" Height="59" Margin="0,96,25,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2" HorizontalAlignment="Right" Width="145"/>
         <TextBlock x:Name="finalScore2" Grid.Column="3" HorizontalAlignment="Left" Height="59" Margin="35,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" FontSize="30" FontFamily="Showcard Gothic" Grid.RowSpan="2" Grid.ColumnSpan="2"/>

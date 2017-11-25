@@ -23,7 +23,8 @@
         </Grid.RowDefinitions>
         <Button x:Name="Home" Background="Green" Content="Home" Grid.Column="2" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="HomeClick"/>
         <Button x:Name="Easy" Background="Green" Content="Easy" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="50" FontFamily="Showcard Gothic" Click="EasyClick" />
-        <!--<Button x:Name="Regular" Background="OrangeRed" Content="Regular" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="45" FontFamily="Showcard Gothic" Click="RegularClick"/>
-        <Button x:Name="Hard" Background="Red" Content="Hard" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontFamily="Showcard Gothic" FontSize="50" Click="HardClick"/>-->
+        <Button x:Name="Regular" Background="OrangeRed" Content="Regular" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="45" FontFamily="Showcard Gothic" Click="RegularClick"/>
+        <Button x:Name="Hard" Background="Red" Content="Hard" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontFamily="Showcard Gothic" FontSize="50" Click="HardClick"/>
+        <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="108,10,0,0" Grid.Row="4" VerticalAlignment="Top" Click="button_Click"/>
     </Grid>
 </Page>
