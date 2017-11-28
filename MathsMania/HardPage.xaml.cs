@@ -224,8 +224,7 @@ namespace MathsMania
                 finalScore1.Foreground = new SolidColorBrush(Colors.Red);
                 answerBox.IsEnabled = false;
                 correctCounter = 0;
-                score = 0;
-                score1.Text = "";
+                
 
                 //if statement to get the answer and to print out the correct answer to the user.
 
@@ -279,18 +278,21 @@ namespace MathsMania
                 //use try catch method to store highscore into local settings
                 try
                 {
-                    int temp = Convert.ToInt32(localSettings.Values["easyHighScore"]);
+                    int temp = Convert.ToInt32(localSettings.Values["hardHighScore"]);
                     if (temp < score)
                     {
-                        localSettings.Values["easyHighScore"] = score.ToString();
+                        localSettings.Values["hardHighScore"] = score.ToString();
 
                     }
                 }
                 catch
                 {
                     // doesn't exist, just set the value
-                    localSettings.Values["easyHighScore"] = score.ToString();
+                    localSettings.Values["hardHighScore"] = score.ToString();
                 }
+
+                score = 0;
+                score1.Text = "";
 
             }
         }//timer_tick end

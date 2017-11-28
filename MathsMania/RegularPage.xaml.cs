@@ -179,8 +179,7 @@ namespace MathsMania
                 finalScore1.Foreground = new SolidColorBrush(Colors.Red);
                 answerBox.IsEnabled = false;
                 correctCounter = 0;
-                score = 0;
-                score1.Text = "";
+                
 
                 //if statement to get the answer and to print out the correct answer to the user.
                 if (firstSymbol.Text == "+")
@@ -222,6 +221,9 @@ namespace MathsMania
                     // doesn't exist, just set the value
                     localSettings.Values["reghighScore"] = score.ToString();
                 }
+
+                score = 0;
+                score1.Text = "";
 
             }
         }//timer_tick end

@@ -34,7 +34,7 @@
         
         <!--Textblocks to display heading and score-->
         <TextBlock x:Name="highScore" Foreground="AntiqueWhite" HorizontalAlignment="Center" Margin="20,0,10,141.333" Grid.Row="1" TextWrapping="NoWrap" Text="High Scores" VerticalAlignment="Bottom" Height="108" Width="340" RenderTransformOrigin="0.491,0.506" Grid.RowSpan="2" FontFamily="Bradley Hand ITC" FontSize="60"/>
-        <TextBlock x:Name="scoreText" Foreground="AntiqueWhite" HorizontalAlignment="Center" Margin="132,0,35,105" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Height="131" Width="183" Grid.RowSpan="2" FontSize="80" FontFamily="Bradley Hand ITC" Visibility="Collapsed" />
+        <TextBlock x:Name="scoreText" Foreground="AntiqueWhite" HorizontalAlignment="Center" Margin="132,0,35,105" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="131" Width="183" Grid.RowSpan="2" FontSize="80" FontFamily="Bradley Hand ITC" />
 
         <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
         <Image x:Name="duster" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="137,20,0,0" Grid.Row="4" VerticalAlignment="Top" Width="144" Source="Assets/duster.png" RenderTransformOrigin="0.509,0.547" Grid.ColumnSpan="2"/>

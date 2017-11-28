@@ -22,9 +22,6 @@ namespace MathsMania
     /// </summary>
     public partial class Settings : Page
     {
-        public static int easyHighscore;
-
-        
 
         public Settings()
         {
@@ -40,20 +37,16 @@ namespace MathsMania
             int tag = Convert.ToInt32(current.Tag);
             if (tag == 6)
             {
-                scoreText.Visibility = Visibility.Visible;
-                scoreText.Text = EasyPage.localSettings.Values["easyHighScore"].ToString();
-              
+                scoreText.Text = EasyPage.localSettings.Values["easyHighScore"].ToString(); 
             }
 
             else if (tag == 7)
-            {
-                scoreText.Visibility = Visibility.Visible;
+            {                
                 scoreText.Text = RegularPage.localSettings.Values["reghighScore"].ToString();
             }
 
-            else
-            {
-                scoreText.Visibility = Visibility.Visible;
+            else if (tag == 8)
+            {             
                 scoreText.Text = HardPage.localSettings.Values["hardHighScore"].ToString();
             }
             
