@@ -24,36 +24,54 @@ namespace MathsMania
     public sealed partial class SelectPage : Page
     {
 
+        //to mainpage
+        private void BackClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
+
+        //to mainpage
         private void HomeClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null);
         }
 
+        //to easy page
         private void EasyClick(object sender, RoutedEventArgs e)
         {
           
             this.Frame.Navigate(typeof(EasyPage), null);
         }
 
+        //to regular page
         private void RegularClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RegularPage), null);
         }
 
+        //to hard page
         private void HardClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(HardPage), null);
         }
 
+        //to select page
         public SelectPage()
         {
             
             this.InitializeComponent();
         }
 
+        //to highscore page
         private void HighScoreClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Settings), null);
+        }
+
+        //to info page
+        private void info_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(info), null);
         }
     }
 }

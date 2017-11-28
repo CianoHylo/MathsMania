@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="MathsMania.info"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MathsMania"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <!-- Put in background image and rows and columns-->
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/large.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        
+        <!-- Put in 2 buttons a back and a home for navigation purposes-->
+        <Button x:Name="Back" Background="Green" Content="Back" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="76" FontFamily="Showcard Gothic" Click="BackClick"/>
+        <Button x:Name="Home" Background="Green" Content="Home" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="HomeClick"/>
+        
+        <!-- Put in two textblocks one heading and one explaining the game-->
+        <TextBlock x:Name="textBlock" Foreground="AntiqueWhite" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="How To Play" VerticalAlignment="Top" Width="220" Height="99" FontSize="35" FontFamily="Bradley Hand ITC"/>
+        <TextBlock x:Name="textBlock1" Foreground="AntiqueWhite" Grid.Column="1" HorizontalAlignment="Center" Margin="10,114,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Height="260" FontSize="20" FontFamily="Bradley Hand ITC" FontStyle="Italic"
+                   Text="The object of this game is simple! Add, subtract or multiply the numbers in front of you to beat the high score. Be careful though, the more you get right the faster the clock !"/>
+        <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
+    </Grid>
+</Page>

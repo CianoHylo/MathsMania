@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid >
+    <Grid>
+        
+        <!-- Put in image and grid-->
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="Assets/large.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
@@ -18,21 +20,23 @@
             <RowDefinition Height="5*" />
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
-
+        
+        <!-- Add two buttons back and home for navigation-->
         <Button x:Name="Back" Background="Green" Content="Back" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="BackClick"/>
-
+        <Button x:Name="Home" Background="Green" Content="Home" Grid.Column="5" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="HomeClick"/>
+        
+        <!--Add radio buttons inside a stack panel to display high scores-->
         <StackPanel Grid.Row="2"  Margin="100,20.333,10,130.667" Grid.RowSpan="2">
-            
-                <RadioButton Content="Easy Page" Height="50" FontSize="20"  Foreground="Green" Tag="6" Checked="RadioButton_Checked" FontFamily="Bradley Hand ITC" />
+            <RadioButton Content="Easy Page" Height="50" FontSize="20"  Foreground="Green" Tag="6" Checked="RadioButton_Checked" FontFamily="Bradley Hand ITC" />
             <RadioButton Content="Regular Page" Height="50" FontSize="20" Foreground="Orange" Tag="7" Checked="RadioButton_Checked" FontFamily="Bradley Hand ITC" />
             <RadioButton Content="Hard Page" Height="50" FontSize="20" Foreground="Red" Tag="8" Checked="RadioButton_Checked" FontFamily="Bradley Hand ITC" />
-            
         </StackPanel>
         
+        <!--Textblocks to display heading and score-->
         <TextBlock x:Name="highScore" Foreground="AntiqueWhite" HorizontalAlignment="Center" Margin="20,0,10,141.333" Grid.Row="1" TextWrapping="NoWrap" Text="High Scores" VerticalAlignment="Bottom" Height="108" Width="340" RenderTransformOrigin="0.491,0.506" Grid.RowSpan="2" FontFamily="Bradley Hand ITC" FontSize="60"/>
+        <TextBlock x:Name="scoreText" Foreground="AntiqueWhite" HorizontalAlignment="Center" Margin="132,0,35,105" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Height="131" Width="183" Grid.RowSpan="2" FontSize="80" FontFamily="Bradley Hand ITC" Visibility="Collapsed" />
 
-        <TextBlock x:Name="scoreText" Foreground="AntiqueWhite" HorizontalAlignment="Center" Margin="132,0,35,105" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="131" Width="183" Grid.RowSpan="2" FontSize="80" FontFamily="Bradley Hand ITC"/>
-
-
+        <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
+        <Image x:Name="duster" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="137,20,0,0" Grid.Row="4" VerticalAlignment="Top" Width="144" Source="Assets/duster.png" RenderTransformOrigin="0.509,0.547" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

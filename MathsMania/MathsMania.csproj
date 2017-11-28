@@ -101,6 +101,9 @@
     <Compile Include="HardPage.xaml.cs">
       <DependentUpon>HardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="info.xaml.cs">
+      <DependentUpon>info.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="info.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -24,6 +24,8 @@ namespace MathsMania
     {
         public static int easyHighscore;
 
+        
+
         public Settings()
         {
             this.InitializeComponent();
@@ -31,31 +33,41 @@ namespace MathsMania
         }
 
         // use radio button to display high score depending on selected level
+        //use the tags to decide which button is checked and which score to display
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             RadioButton current = (RadioButton)sender;
             int tag = Convert.ToInt32(current.Tag);
             if (tag == 6)
             {
+                scoreText.Visibility = Visibility.Visible;
                 scoreText.Text = EasyPage.localSettings.Values["easyHighScore"].ToString();
               
             }
 
             else if (tag == 7)
             {
+                scoreText.Visibility = Visibility.Visible;
                 scoreText.Text = RegularPage.localSettings.Values["reghighScore"].ToString();
             }
 
             else
             {
+                scoreText.Visibility = Visibility.Visible;
                 scoreText.Text = HardPage.localSettings.Values["hardHighScore"].ToString();
             }
             
         }
 
+        //navigation
         private void BackClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SelectPage), null);
+        }
+
+        private void HomeClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
         }
     }
 }

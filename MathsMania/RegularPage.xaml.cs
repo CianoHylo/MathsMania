@@ -38,7 +38,7 @@ namespace MathsMania
         public int num2;
         public int char1;
         public int answer;
-        char[] symbol1 = "+-".ToCharArray(); //create a character array so random class can randomly pick plus or minus
+        char[] symbol1 = "+-*".ToCharArray(); //create a character array so random class can randomly pick plus or minus
         String symbol2 = "=";
 
         //initialize variables.
@@ -74,7 +74,6 @@ namespace MathsMania
 
             //reset everything when correct/ game over
             finalScore1.Text = "";
-            finalScore2.Text = "";
             gameover.Text = "";
             answerBox.Text = "";
             Done.Content = "Done";
@@ -139,12 +138,17 @@ namespace MathsMania
             }
 
             // make sure number 2 isnt bigger than number 1 so we dont get minus answers
-            else
+            else if (firstSymbol.Text == "-")
             {
                 num1 = ran1.Next(48) + 1;
                 num2 = ran1.Next(0, num1) + 1;
             }
 
+            else
+            {
+                num1 = ran1.Next(12) + 1;
+                num2 = ran1.Next(12) + 1;
+            }
             // set numbers to text boxes.
             firstNum.Text = num1.ToString();
             secondNum.Text = num2.ToString();
@@ -158,7 +162,7 @@ namespace MathsMania
             if (increment > 0)
             {
                 increment--;
-                timertext.Text = increment.ToString();
+                timertext.Text = "    " + increment.ToString();
             }
 
             // game over if timer ticks to 0.
@@ -169,17 +173,14 @@ namespace MathsMania
                 Go.IsEnabled = true;
                 timer.Stop();
                 Go.Content = "Try Again";
-                gameover.Text = "GAME OVER";
+                gameover.Text = "   GAME OVER";
                 gameover.Foreground = new SolidColorBrush(Colors.Red);
-                finalScore1.Text = "SCORE:";
-                finalScore2.Text = score.ToString();
+                finalScore1.Text = "SCORE: " + score.ToString();
                 finalScore1.Foreground = new SolidColorBrush(Colors.Red);
-                finalScore2.Foreground = new SolidColorBrush(Colors.Red);
                 answerBox.IsEnabled = false;
                 correctCounter = 0;
                 score = 0;
                 score1.Text = "";
-                score2.Text = "";
 
                 //if statement to get the answer and to print out the correct answer to the user.
                 if (firstSymbol.Text == "+")
@@ -187,9 +188,14 @@ namespace MathsMania
                     answer = num1 + num2;
                 }
 
-                else
+                else if (firstSymbol.Text == "-")
                 {
                     answer = num1 - num2;
+                }
+
+                else
+                {
+                    answer = num1 * num2;
                 }
                 Done.Content = ("Correct Answer = " + answer.ToString());
                 Done.FontSize = 18;
@@ -235,9 +241,14 @@ namespace MathsMania
                 answer = num1 + num2;
             }
 
-            else
+            else if (firstSymbol.Text == "-")
             {
                 answer = num1 - num2;
+            }
+
+            else
+            {
+                answer = num1 * num2;
             }
 
 
@@ -246,13 +257,11 @@ namespace MathsMania
                 //reset boxes and variables and print correct to screen and update score
                 answerBox.Text = "";
                 timer.Stop();
-                gameover.Text = "  Correct!";
+                gameover.Text = "      Correct!";
                 gameover.Foreground = new SolidColorBrush(Colors.Green);
                 score++;
-                score1.Text = "SCORE:";
-                score2.Text = score.ToString();
-                score1.Foreground = new SolidColorBrush(Colors.Black);
-                score2.Foreground = new SolidColorBrush(Colors.Black);
+                score1.Text = "SCORE: " + score.ToString();
+                score1.Foreground = new SolidColorBrush(Colors.Yellow);
                 correctCounter++;
 
                 //play correct sound
@@ -278,12 +287,10 @@ namespace MathsMania
             else
             {
                 //reset variables, print final score and Game over to screen
-                gameover.Text = "GAME OVER";
+                gameover.Text = "   GAME OVER";
                 gameover.Foreground = new SolidColorBrush(Colors.Red);
-                finalScore1.Text = "SCORE:";
-                finalScore2.Text = score.ToString();
+                finalScore1.Text = "SCORE: " + score.ToString();
                 finalScore1.Foreground = new SolidColorBrush(Colors.Red);
-                finalScore2.Foreground = new SolidColorBrush(Colors.Red);
 
                 //use try catch method to store highscore into local settings
                 try
@@ -306,7 +313,6 @@ namespace MathsMania
                 correctCounter = 0;
                 score = 0;
                 score1.Text = "";
-                score2.Text = "";
                 Done.Content = ("Correct Answer = " + answer.ToString());
                 Done.FontSize = 18;
 

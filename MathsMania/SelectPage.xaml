@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid>
+        
+        <!-- Put in background image and rows and columns-->
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="Assets/large.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
@@ -24,13 +26,20 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
-        <Button x:Name="Home" Background="Green" Content="Home" Grid.Column="2" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="HomeClick"/>
+        
+        <!-- Add back button and home button for navigation-->
+        <Button x:Name="Back" Background="Green" Content="Back" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="76" FontFamily="Showcard Gothic" Click="BackClick" Width="60"/>
+        <Button x:Name="Home" Background="Green" Content="Home" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="76" Width="60" FontFamily="Showcard Gothic" Click="HomeClick"/>
+        
+        <!--Add easy, reg and hard buttons to navigate to the game pages. Also add highscore button-->
         <Button x:Name="Easy" Background="Green" Content="Easy" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="50" FontFamily="Showcard Gothic" Click="EasyClick" />
         <Button x:Name="Regular" Background="OrangeRed" Content="Regular" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontSize="45" FontFamily="Showcard Gothic" Click="RegularClick"/>
         <Button x:Name="Hard" Background="Red" Content="Hard" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontFamily="Showcard Gothic" FontSize="50" Click="HardClick"/>
         <Button x:Name="HighScore" Background="Yellow" Content="High Scores" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Height="108" RenderTransformOrigin="0.185,0.385" Width="220" FontFamily="Showcard Gothic" FontSize="32" Click="HighScoreClick"/>
-
+        
+        <!--Add images to improve design-->
         <Image x:Name="pens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="150" Margin="8,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Source="Assets/pens.png"/>
         <Image x:Name="calculator" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="4,55,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100"  Source="Assets/calculator.png"/>
+        <Button x:Name="info"  Background="LightSkyBlue" Foreground="DarkBlue" FontSize="60" Content="i" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.159,-0.25" Height="78" Width="97" FontFamily="Segoe Script" Click="info_Click"/>
     </Grid>
 </Page>
